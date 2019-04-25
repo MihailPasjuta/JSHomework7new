@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	</head>
+<body>
+<script>
+///1 Задание
+var time=new Date();
+var over;
+over=60*(23-time.getHours())+(60-time.getMinutes());
+console.log(over);
+///2 Задание
+var seconds;
+seconds=60*60*time.getHours()+60*time.getMinutes()+time.getSeconds();
+console.log(seconds);
+///3 Задание
+var day=new Date(2015,0,25);
+var options={
+	weekday:'long',
+};
+console.log(day.toLocaleString('ru',options));
+///4 Задание
+var year=prompt("Год рождения","");
+var month=prompt("Месяц рождения","");
+var day=prompt("Число","");
+var dayToBirthday;
+var today=new Date();
+var date=new Date(today.getFullYear(),month-1,day);
+dayToBirthday=(+date-today)/1000/60/60/24;
+
+console.log(Math.round(dayToBirthday+1,0));
+</script>
+</body>
